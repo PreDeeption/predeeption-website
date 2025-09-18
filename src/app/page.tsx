@@ -48,7 +48,7 @@ export default function HomePage() {
       {/* Technology */}
       <section id="technology" className="px-8 py-20 bg-gradient-to-r from-black via-yellow-900 to-black">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <Image src="/tech.jpg" alt="Technology" width={500} height={500} className="rounded-2xl shadow-lg" />
+          <Image src="/technology.png" alt="Technology" width={500} height={500} className="rounded-2xl shadow-lg" />
           <div>
             <h2 className="text-3xl font-bold text-yellow-400">Our Technology</h2>
             <p className="mt-6 text-gray-200">

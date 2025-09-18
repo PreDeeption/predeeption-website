@@ -27,8 +27,9 @@ export default function Header() {
     >
       <div className="flex items-center justify-between px-4 md:px-8 py-4">
         <div className="flex items-center gap-3">
-          <Image src="/logo.png" alt="Logo" width={40} height={40} />
+          <Image src="/logo.jpeg" alt="Logo" width={40} height={40} />
           <span className="text-xl font-bold text-yellow-400">Predeeption</span>
+          <Link href={"/"} className="sr-only">Home</Link>
         </div>
 
         {/* Desktop Nav */}
