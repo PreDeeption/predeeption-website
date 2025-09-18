@@ -4,12 +4,12 @@ import Image from "next/image";
 
 export default function AboutPage() {
   const team = [
-    { name: "Christophe Verdouq", role: "CEO", img: "/team1.jpg" },
-    { name: "Josh Trivedi", role: "CTO", img: "/team2.jpg" },
-    { name: "Arnaud Demortiere", role: "CSO", img: "/team3.jpg" },
-    { name: "Basille Jezequel", role: "Lead Engineer", img: "/team4.jpg" },
-    { name: "Raghvender Raghvender", role: "Lead MLOps Engineer", img: "/team5.jpg" },
-    { name: "Mahdi Abid", role: "ML Research Engineer", img: "/team6.jpg" },
+    { name: "Christophe Verdouq", role: "CEO", img: "https://placehold.co/200x200?text=Christophe" },
+    { name: "Josh Trivedi", role: "CTO", img: "https://placehold.co/200x200?text=Josh" },
+    { name: "Arnaud Demortiere", role: "CSO", img: "https://placehold.co/200x200?text=Arnaud" },
+    { name: "Basille Jezequel", role: "Lead Engineer", img: "https://placehold.co/200x200?text=Basille" },
+    { name: "Raghvender Raghvender", role: "Lead MLOps Engineer", img: "https://placehold.co/200x200?text=Raghvender" },
+    { name: "Mahdi Abid", role: "ML Research Engineer", img: "https://placehold.co/200x200?text=Mahdi" },
   ];
 
   return (
@@ -33,7 +33,13 @@ export default function AboutPage() {
             providing real-time insights and actionable analytics for sustainable energy and mobility.
           </p>
         </div>
-        <Image src="/team-banner.jpg" alt="Team Banner" width={500} height={500} className="rounded-2xl shadow-lg" />
+        <Image
+          src="https://placehold.co/500x500?text=Team+Banner"
+          alt="Team Banner"
+          width={500}
+          height={500}
+          className="rounded-2xl shadow-lg w-full object-cover"
+        />
       </section>
 
       <section className="mt-20 max-w-6xl mx-auto">
@@ -41,7 +47,13 @@ export default function AboutPage() {
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member) => (
             <div key={member.name} className="text-center">
-              <Image src={member.img} alt={member.name} width={200} height={200} className="rounded-full mx-auto shadow-lg" />
+              <Image
+                src={member.img}
+                alt={member.name}
+                width={200}
+                height={200}
+                className="w-40 h-40 rounded-full mx-auto shadow-lg object-cover"
+              />
               <h3 className="mt-4 font-semibold text-yellow-400">{member.name}</h3>
               <p className="text-gray-300">{member.role}</p>
             </div>
@@ -51,3 +63,4 @@ export default function AboutPage() {
     </main>
   );
 }
+// Note: Replace placeholder images with actual team member photos when available.
