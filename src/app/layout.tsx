@@ -1,14 +1,31 @@
-import './globals.css';
-import { ReactNode } from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
+// src/app/layout.tsx
+import "./globals.css";
+import type { Metadata } from "next";
+import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export const metadata: Metadata = {
+  title: "Predeeption",
+  description: "Intelligent Battery Management Solutions",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div className="flex flex-col min-h-screen bg-black text-white">
-      <Header />
-      <main className="flex-1">{children}</main>
-      <Footer />
-    </div>
+    <html lang="en">
+      <body className="bg-black text-white flex flex-col min-h-screen">
+        {/* Universal Header */}
+        <Header />
+
+        {/* Main page content */}
+        <main className="flex-1">{children}</main>
+
+        {/* Universal Footer */}
+        <Footer />
+      </body>
+    </html>
   );
 }

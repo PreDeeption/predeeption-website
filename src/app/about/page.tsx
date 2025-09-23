@@ -1,15 +1,12 @@
 "use client";
 
-import Image from "next/image";
-
 export default function AboutPage() {
   const team = [
-    { name: "Christophe Verdouq", role: "CEO", img: "https://placehold.co/200x200?text=Christophe" },
-    { name: "Josh Trivedi", role: "CTO", img: "https://placehold.co/200x200?text=Josh" },
-    { name: "Arnaud Demortiere", role: "CSO", img: "https://placehold.co/200x200?text=Arnaud" },
-    { name: "Basille Jezequel", role: "Lead Engineer", img: "https://placehold.co/200x200?text=Basille" },
-    { name: "Raghvender Raghvender", role: "Lead MLOps Engineer", img: "https://placehold.co/200x200?text=Raghvender" },
-    { name: "Mahdi Abid", role: "ML Research Engineer", img: "https://placehold.co/200x200?text=Mahdi" },
+    { name: "Christophe Verdouq", role: "CEO", img: "/team/Christophe.png" },
+    { name: "Josh Trivedi", role: "CTO", img: "/team/Josh.jpg" },
+    { name: "Arnaud Demortiere", role: "CSO", img: "/team/Arnaud.jpeg" },
+    { name: "Basille Jezequel", role: "Lead Engineer", img: "/team/Basile.jpg" },
+    { name: "Raghvender Raghvender", role: "Lead MLOps Engineer", img: "/team/Raghvender.jpeg" },
   ];
 
   return (
@@ -18,6 +15,7 @@ export default function AboutPage() {
         About Predeeption
       </h1>
 
+      {/* Mission / Vision Section */}
       <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
@@ -33,25 +31,23 @@ export default function AboutPage() {
             providing real-time insights and actionable analytics for sustainable energy and mobility.
           </p>
         </div>
-        <Image
-          src="https://placehold.co/500x500?text=Team+Banner"
+
+        <img
+          src="/team/team-banner.jpg"
           alt="Team Banner"
-          width={500}
-          height={500}
           className="rounded-2xl shadow-lg w-full object-cover"
         />
       </section>
 
+      {/* Team Section */}
       <section className="mt-20 max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-yellow-400 mb-8 text-center">Meet the Team</h2>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member) => (
             <div key={member.name} className="text-center">
-              <Image
+              <img
                 src={member.img}
                 alt={member.name}
-                width={200}
-                height={200}
                 className="w-40 h-40 rounded-full mx-auto shadow-lg object-cover"
               />
               <h3 className="mt-4 font-semibold text-yellow-400">{member.name}</h3>
@@ -63,4 +59,3 @@ export default function AboutPage() {
     </main>
   );
 }
-// Note: Replace placeholder images with actual team member photos when available.
