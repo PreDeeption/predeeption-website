@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
-import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   const footerRef = useRef<HTMLDivElement>(null);
@@ -22,43 +22,55 @@ export default function Footer() {
     };
   }, []);
 
+  const awards = [
+    "/award_1.png",
+    "/award_2.png",
+    "/award_3.png",
+    "/award_4.png",
+    "/award_5.png",
+  ];
+
   return (
     <footer
       ref={footerRef}
-      className={`px-8 py-12 bg-black text-gray-300 transition-opacity duration-500 ${
+      className={`px-6 py-8 bg-black text-gray-300 transition-opacity duration-500 ${
         visible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="max-w-6xl mx-auto grid sm:grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <h3 className="text-lg font-bold text-yellow-400">Predeeption</h3>
-          <p className="mt-4 text-sm">
-            Innovating energy intelligence through prediction and real-time analytics.
-          </p>
-        </div>
-        <div>
-          <h4 className="font-semibold text-white">Awards & Certifications</h4>
-          <div className="mt-4 flex gap-4">
-            <Image src="/award1.png" alt="Award 1" width={60} height={60} />
-            <Image src="/award2.png" alt="Award 2" width={60} height={60} />
+      <div className="w-full flex flex-col md:flex-row justify-between gap-6">
+        {/* Left - Awards */}
+        <div className="flex-1">
+          <h4 className="font-semibold text-white text-lg">
+            Awards & Certifications
+          </h4>
+          <div className="mt-4 grid grid-cols-3 gap-4 place-items-center">
+            {awards.map((award, idx) => (
+              <div key={idx} className="flex justify-center items-center">
+                <Image
+                  src={award}
+                  alt={`Award ${idx + 1}`}
+                  width={180}
+                  height={180}
+                  className="object-contain w-full max-w-[80px] sm:max-w-[100px] md:max-w-[120px]"
+                />
+              </div>
+            ))}
           </div>
         </div>
-        <div>
-          <h4 className="font-semibold text-white">Follow Us</h4>
-          <div className="mt-4 flex gap-4">
-            <a href="https://linkedin.com" target="_blank">
+
+        {/* Right - Socials */}
+        <div className="flex flex-col items-start md:items-end flex-1">
+          <h4 className="font-semibold text-white text-lg">Follow Us</h4>
+          <div className="mt-2 flex gap-3">
+            <a href="https://linkedin.com/predeeption" target="_blank">
               <FaLinkedin size={24} className="hover:text-yellow-400" />
-            </a>
-            <a href="https://twitter.com" target="_blank">
-              <FaTwitter size={24} className="hover:text-yellow-400" />
-            </a>
-            <a href="https://github.com" target="_blank">
-              <FaGithub size={24} className="hover:text-yellow-400" />
             </a>
           </div>
         </div>
       </div>
-      <p className="mt-8 text-sm text-center text-gray-500">
+
+      {/* Footer bottom */}
+      <p className="mt-6 text-sm text-center text-gray-500">
         © {new Date().getFullYear()} Predeeption. All rights reserved.
       </p>
     </footer>
