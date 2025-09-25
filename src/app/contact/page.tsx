@@ -39,8 +39,7 @@ export default function ContactPage() {
 
         <div className="mt-12 text-center text-gray-400">
           <p>Email: info@predeeption.com</p>
-          <p>Phone: +1 (555) 123-4567</p>
-          <p>Address: 123 Energy Drive, Tech City</p>
+          <p>Address: 15 Rue Baudelocque, 80000 Amiens</p>
         </div>
       </section>
     </main>
