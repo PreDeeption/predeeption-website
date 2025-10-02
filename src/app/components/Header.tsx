@@ -21,22 +21,21 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-transform duration-300 ${
-        show ? "translate-y-0" : "-translate-y-full"
-      } bg-black bg-opacity-90`}
+      className={`fixed top-0 w-full z-50 transition-transform duration-300 ${show ? "translate-y-0" : "-translate-y-full"
+        } bg-black bg-opacity-90`}
     >
       <div className="w-full flex items-center justify-between px-4 md:px-8 py-3">
         {/* Left: Logo */}
         <div className="flex-1 flex justify-start">
           <Link href="/" className="flex items-center">
             <Image
-              src="/logo_01.svg"
+              src="/logo.jpeg"
               alt="Logo"
-              width={150}
-              height={150}
-              className="w-28 h-auto sm:w-32 md:w-40 lg:w-48"
+              width={120}
+              height={40}
+              className="h-10 w-auto"  // ensures height ~40px, width adjusts automatically
               priority
-            />
+            /> <h1 className="text-yellow-400 font-bold text-xl ml-2">Predeeption</h1>
           </Link>
         </div>
 

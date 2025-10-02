@@ -23,7 +23,7 @@ export default function Footer() {
   }, []);
 
   const awards = [
-    "/award_1.png",
+    "/award_1.svg",
     "/award_2.png",
     "/award_3.png",
     "/award_4.png",
@@ -33,9 +33,8 @@ export default function Footer() {
   return (
     <footer
       ref={footerRef}
-      className={`px-6 py-8 bg-black text-gray-300 transition-opacity duration-500 ${
-        visible ? "opacity-100" : "opacity-0"
-      }`}
+      className={`px-6 py-8 bg-black text-gray-300 transition-opacity duration-500 ${visible ? "opacity-100" : "opacity-0"
+        }`}
     >
       <div className="w-full flex flex-col md:flex-row justify-between gap-6">
         {/* Left - Awards */}
@@ -43,19 +42,20 @@ export default function Footer() {
           <h4 className="font-semibold text-white text-lg">
             Awards & Certifications
           </h4>
-          <div className="mt-4 grid grid-cols-3 gap-4 place-items-center">
+          <div className="mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2 place-items-center">
             {awards.map((award, idx) => (
               <div key={idx} className="flex justify-center items-center">
                 <Image
-                  src={award}
+                  src={"/awards" + award}
                   alt={`Award ${idx + 1}`}
-                  width={180}
-                  height={180}
-                  className="object-contain w-full max-w-[80px] sm:max-w-[100px] md:max-w-[120px]"
+                  width={80}
+                  height={80}
+                  className="object-contain w-[60px] sm:w-[80px] md:w-[100px]"
                 />
               </div>
             ))}
           </div>
+
         </div>
 
         {/* Right - Socials */}
