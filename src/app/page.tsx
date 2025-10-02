@@ -26,7 +26,31 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero */}
-      <section className="flex flex-col justify-center items-center text-center px-6 md:px-12 h-screen relative">
+      <section className="relative flex flex-col justify-center items-center text-center px-6 md:px-12 h-screen overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover -z-10"
+        >
+          <source src="/slider.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        
+
+        {/* Centered Logo */}
+        <Image
+          src="/logo_01.svg"
+          alt="Main Logo"
+          width={300}
+          height={300}
+          className="w-40 sm:w-56 md:w-72 lg:w-80 h-auto mb-6"
+          priority
+        />
+
+        {/* Hero Text */}
         <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-yellow-400 drop-shadow-lg">
           Powering the Future of Battery Intelligence
         </h1>
@@ -34,6 +58,8 @@ export default function HomePage() {
           Predicting battery life, detecting anomalies, managing fleets, and
           enabling edge solutions for real-time SOH and SOC estimation.
         </p>
+
+        {/* CTA Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/contact">
             <button className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-500">
@@ -44,8 +70,8 @@ export default function HomePage() {
             Learn More
           </button>
         </div>
-        <div className="absolute inset-0 -z-10 bg-[url('/hero-bg.jpg')] bg-cover bg-center opacity-20"></div>
       </section>
+
 
       {/* Why PreDeeption */}
       <section id="solutions" className="px-8 py-20 bg-white text-black">
@@ -96,32 +122,33 @@ export default function HomePage() {
             ].map((feature, idx) => (
               <div
                 key={idx}
-                className="flex flex-col items-start p-6 bg-yellow-50 rounded-2xl shadow hover:shadow-xl transition"
+                className="flex flex-col items-center text-center p-8 bg-yellow-50 rounded-2xl shadow hover:shadow-xl transition"
               >
                 {/* Logo */}
-                <div className="w-12 h-12 mb-4 flex items-center justify-center">
-                  <img
+                <div className="mb-6">
+                  <Image
                     src={feature.icon}
                     alt={`${feature.title} icon`}
-                    className="w-12 h-12"
+                    width={60}     // mini icon size update from 60 to 90
+                    height={60}
+                    className="object-contain"
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-black">
-                  {feature.title}
-                </h3>
+                <h3 className="text-lg font-semibold text-black">{feature.title}</h3>
                 <p className="mt-3 text-gray-700">{feature.desc}</p>
               </div>
             ))}
           </div>
-        </div>
-        <div className="mt-16">
-          <Image
-            src="/website_image_01.svg"
-            alt="Solutions Overview"
-            width={1200}
-            height={400}
-            className="w-full h-auto rounded-xl shadow-lg object-cover"
-          />
+
+          <div className="mt-16">
+            <Image
+              src="/website_image_01.svg"
+              alt="Solutions Overview"
+              width={1200}
+              height={400}
+              className="w-full h-auto rounded-xl shadow-lg object-cover"
+            />
+          </div>
         </div>
       </section>
 
