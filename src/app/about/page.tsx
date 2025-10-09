@@ -7,8 +7,8 @@ export default function AboutPage() {
     { name: "Christophe Verdouq", role: "CEO", img: "/team/Christophe.png" },
     { name: "Josh Trivedi", role: "CTO", img: "/team/Josh.jpg" },
     { name: "Arnaud Demortiere", role: "CSO", img: "/team/Arnaud.jpeg" },
-    { name: "Basille Jezequel", role: "Lead Engineer", img: "/team/Basile.jpg" },
-    { name: "Raghvender Raghvender", role: "Lead MLOps Engineer", img: "/team/Raghvender.jpeg" },
+    { name: "Basille Jezequel", role: "Founding MLOps Engineer", img: "/team/Basile.jpg" },
+    { name: "Raghvender Raghvender", role: "Founding AI Engineer", img: "/team/Raghvender.jpeg" },
   ];
 
   return (
