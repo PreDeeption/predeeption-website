@@ -33,12 +33,14 @@ export default function HomePage() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover -z-10"
+          className="absolute inset-0 w-full h-full object-cover -z-20"
         >
-          <source src="/slider.mp4" type="video/mp4" />
+          <source src="/slider-hd.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50 -z-10"></div>
 
         {/* Centered Logo */}
         <Image
@@ -90,27 +92,27 @@ export default function HomePage() {
           <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                icon: "/Mini-logo-1.svg",
+                icon: "/Mini-logo-5.svg",
                 title: "High Accuracy of Battery SOH Estimation",
                 desc: "Get a precise view of your battery’s health using advanced AI models trained on real-world cycling data.",
               },
               {
-                icon: "/Mini-logo-2.svg",
+                icon: "/Mini-logo-1.svg",
                 title: "Long-Range Battery SOH Prediction",
                 desc: "Forecast battery aging and lifespan well ahead of time to optimize maintenance and reduce unexpected failures.",
               },
               {
-                icon: "/Mini-logo-3.svg",
+                icon: "/Mini-logo-2.svg",
                 title: "Real-Time SOH / SOC / RUL Estimation",
                 desc: "Monitor State of Health, State of Charge, and Remaining Useful Life in real time for better operational decisions.",
               },
               {
-                icon: "/Mini-logo-4.svg",
+                icon: "/Mini-logo-3.svg",
                 title: "AI-Driven Anomaly Detection & Alerts",
                 desc: "Detect irregular behaviors and failure patterns early with real-time alerts driven by AI anomaly detection.",
               },
               {
-                icon: "/Mini-logo-5.svg",
+                icon: "/Mini-logo-4.svg",
                 title: "Fleet Statistics: Profile, Usage, Environment",
                 desc: "Track fleet-level patterns across usage, environments, and charging habits to optimize performance and cost.",
               },
