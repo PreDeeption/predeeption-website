@@ -38,7 +38,7 @@ export default function ContactPage() {
         </form>
 
         <div className="mt-12 text-center text-gray-400">
-          <p>Email: info@predeeption.com</p>
+          <p>Email: Coming Soon</p>
           <p>Address: 15 Rue Baudelocque, 80000 Amiens</p>
         </div>
       </section>

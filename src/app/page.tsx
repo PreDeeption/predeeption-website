@@ -35,8 +35,8 @@ export default function HomePage() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover -z-10"
         >
-          <source src="/slider.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          <source src="/banner-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag. 
         </video>
         
 
