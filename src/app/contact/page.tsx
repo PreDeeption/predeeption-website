@@ -38,8 +38,9 @@ export default function ContactPage() {
         </form>
 
         <div className="mt-12 text-center text-gray-400">
-          <p>Email: info@predeeption.com</p>
-          <p>Address: 15 Rue Baudelocque, 80000 Amiens</p>
+          <p>Email: arnaud.demortiere@predeeption.com | josh.trivedi@predeeption.com</p>
+          <p>Amiens Office : 15 Rue Baudelocque, 80000 Amiens</p>
+          <p>Palaiseau Office: 1 Rue Honoré d'Estienne d'Orves, 91120 Palaiseau</p>
         </div>
       </section>
     </main>
