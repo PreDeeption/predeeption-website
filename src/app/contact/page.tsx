@@ -1,6 +1,8 @@
 "use client";
 
-export default function ContactPage() {
+import React from "react";
+
+export default function ContactPage(): React.ReactElement {
   return (
     <main className="min-h-screen bg-black text-white px-8 py-20">
       <h1 className="text-4xl md:text-5xl font-bold text-yellow-400 text-center mb-12">

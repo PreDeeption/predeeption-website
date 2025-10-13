@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import React from "react";
 
 export default function AboutPage() {
   const team = [
@@ -63,14 +64,16 @@ export default function AboutPage() {
           <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
           <p className="text-gray-300 mb-6">
             PreDeeption is dedicated to revolutionizing energy storage systems
-            through predictive analytics, anomaly detection, and edge intelligence.
-            Our solutions empower businesses to optimize battery life and manage fleets efficiently.
+            through predictive analytics, anomaly detection, and edge
+            intelligence. Our solutions empower businesses to optimize battery
+            life and manage fleets efficiently.
           </p>
 
           <h2 className="text-2xl font-semibold mb-4">Our Vision</h2>
           <p className="text-gray-300">
             To be the global leader in intelligent battery management solutions,
-            providing real-time insights and actionable analytics for sustainable energy and mobility.
+            providing real-time insights and actionable analytics for
+            sustainable energy and mobility.
           </p>
         </div>
 
@@ -95,45 +98,63 @@ export default function AboutPage() {
         <h3 className="text-2xl font-semibold text-yellow-400 mb-4">
           What PreDeeption Provides:
         </h3>
+        <h3 className="text-2xl font-semibold text-yellow-400 mb-4">
+          What PreDeeption Provides:
+        </h3>
         <ul className="list-disc list-inside text-gray-300 space-y-3">
           <li>
-            <strong>Real-Time SOH, SOC & RUL Estimation:</strong> Continuous and precise evaluation of battery
-            State of Health, State of Charge, and Remaining Useful Life using real-world signals, usage data, and
+            <strong>Real-Time SOH, SOC & RUL Estimation:</strong> Continuous and
+            precise evaluation of battery State of Health, State of Charge, and
+            Remaining Useful Life using real-world signals, usage data, and
             environmental conditions.
           </li>
           <li>
-            <strong>Mid- and Long-Term SOH Forecasting:</strong> Anticipate battery aging trajectories under
-            varying operational scenarios to plan maintenance, replacement, and second-life applications with confidence.
+            <strong>Mid- and Long-Term SOH Forecasting:</strong> Anticipate
+            battery aging trajectories under varying operational scenarios to
+            plan maintenance, replacement, and second-life applications with
+            confidence.
           </li>
           <li>
-            <strong>AI-Driven Anomaly Detection:</strong> Identify abnormal usage patterns, early signs of
-            degradation, and potential failures with robust models trained on extensive multi-domain battery datasets.
+            <strong>AI-Driven Anomaly Detection:</strong> Identify abnormal
+            usage patterns, early signs of degradation, and potential failures
+            with robust models trained on extensive multi-domain battery
+            datasets.
           </li>
           <li>
-            <strong>Fleet-Level Analytics and Insights:</strong> Analyze and compare battery behavior across
-            entire fleets—whether EVs, e-bikes, or BESS—to detect hotspots, usage trends, and environmental impacts.
+            <strong>Fleet-Level Analytics and Insights:</strong> Analyze and
+            compare battery behavior across entire fleets—whether EVs, e-bikes,
+            or BESS—to detect hotspots, usage trends, and environmental impacts.
           </li>
           <li>
-            <strong>Usage Profile Identification:</strong> Classify and interpret real-world usage scenarios—fast
-            charging, urban driving, temperature extremes—to better understand and optimize operational conditions.
+            <strong>Usage Profile Identification:</strong> Classify and
+            interpret real-world usage scenarios—fast charging, urban driving,
+            temperature extremes—to better understand and optimize operational
+            conditions.
           </li>
         </ul>
 
         <h3 className="text-2xl font-semibold text-yellow-400 mt-10 mb-4">
           How It Works:
         </h3>
+        <h3 className="text-2xl font-semibold text-yellow-400 mt-10 mb-4">
+          How It Works:
+        </h3>
         <p className="text-gray-300 leading-relaxed">
-          PreDeeption’s AI core processes time-series data from charging/discharging cycles, current, voltage,
-          temperature, and other embedded sensor streams. Our Generative AI models simulate realistic aging
-          trajectories under varying scenarios, while our Agentic AI algorithms autonomously adapt to fleet-level
-          dynamics and evolving operational environments. This hybrid approach ensures robust, interpretable, and
-          actionable insights at scale.
+          PreDeeption’s AI core processes time-series data from
+          charging/discharging cycles, current, voltage, temperature, and other
+          embedded sensor streams. Our Generative AI models simulate realistic
+          aging trajectories under varying scenarios, while our Agentic AI
+          algorithms autonomously adapt to fleet-level dynamics and evolving
+          operational environments. This hybrid approach ensures robust,
+          interpretable, and actionable insights at scale.
         </p>
       </section>
 
       {/* Team Section */}
       <section className="mt-20 max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-yellow-400 mb-8 text-center">Meet the Team</h2>
+        <h2 className="text-3xl font-bold text-yellow-400 mb-8 text-center">
+          Meet the Team
+        </h2>
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, idx) => (
             <div key={member.name} className="flex flex-col items-center">
