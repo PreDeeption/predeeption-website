@@ -48,7 +48,7 @@ export default function AboutPage() {
       {/* Title */}
       <h1 className="text-4xl md:text-5xl font-bold text-yellow-400 text-center mb-12">
         About PreDeeption
-      </h1>\
+      </h1>
       
       {/* Mission & Vision */}
       <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
