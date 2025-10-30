@@ -12,7 +12,7 @@ export async function POST(request: Request) {
         "X-Postmark-Server-Token": process.env.POSTMARK_API_TOKEN as string,
       },
       body: JSON.stringify({
-        From: "31c56d0f304703105c48c61fe1f1eeaf@inbound.postmarkapp.com", // must be from a verified domain in Postmark
+        From: "josh.trivedi@predeeption.com", // must be from a verified domain in Postmark
         To: [
           "josh.trivedi@predeeption.com"
         ].join(","), // can add more in the To: [] if needed          

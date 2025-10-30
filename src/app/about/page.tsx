@@ -9,13 +9,13 @@ export default function AboutPage() {
     {
       name: "Christophe Verdouq",
       role: "CEO",
-      img: "/team/Christophe.png",
+      img: "/team/Christophe.jpeg",
       bio: "Christophe leads the company with extensive experience in energy systems and business strategy.",
     },
     {
       name: "Josh Trivedi",
       role: "CTO",
-      img: "/team/Josh.jpg",
+      img: "/team/Josh-1.jpg",
       bio: "Josh oversees technology, AI research, and product development, bringing cutting-edge solutions to life.",
     },
     {
@@ -50,7 +50,7 @@ export default function AboutPage() {
       <h1 className="text-4xl md:text-5xl font-bold text-yellow-400 text-center mb-12">
         About PreDeeption
       </h1>
-      
+
       {/* Mission & Vision */}
       <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         <Image
@@ -77,7 +77,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        
+
       </section>
 
       {/* Platform Overview */}
@@ -95,9 +95,6 @@ export default function AboutPage() {
           transforms raw data into smart, scalable decisions across the entire battery lifecycle.
         </p>
 
-        <h3 className="text-2xl font-semibold text-yellow-400 mb-4">
-          What PreDeeption Provides:
-        </h3>
         <h3 className="text-2xl font-semibold text-yellow-400 mb-4">
           What PreDeeption Provides:
         </h3>
@@ -136,9 +133,6 @@ export default function AboutPage() {
         <h3 className="text-2xl font-semibold text-yellow-400 mt-10 mb-4">
           How It Works:
         </h3>
-        <h3 className="text-2xl font-semibold text-yellow-400 mt-10 mb-4">
-          How It Works:
-        </h3>
         <p className="text-gray-300 leading-relaxed">
           PreDeeption’s AI core processes time-series data from
           charging/discharging cycles, current, voltage, temperature, and other
@@ -155,18 +149,26 @@ export default function AboutPage() {
         <h2 className="text-3xl font-bold text-yellow-400 mb-8 text-center">
           Meet the Team
         </h2>
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 justify-items-center relative">
           {team.map((member, idx) => (
-            <div key={member.name} className="flex flex-col items-center">
+            <div
+              key={member.name}
+              className={`flex flex-col items-center ${idx === 3
+                  ? "lg:col-span-1 lg:col-start-1 lg:translate-x-[66%] lg:-mt-4" // 4th between 1 & 2
+                  : ""
+                } ${idx === 4
+                  ? "lg:col-span-1 lg:col-start-2 lg:translate-x-[66%] lg:-mt-4" // 5th between 2 & 3
+                  : ""
+                }`}
+            >
               {/* 3D Flip Card */}
               <div
                 className="relative w-48 h-48 cursor-pointer perspective"
                 onClick={() => handleFlip(idx)}
               >
                 <div
-                  className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${
-                    flippedIndex === idx ? "rotate-y-180" : ""
-                  } group`}
+                  className={`relative w-full h-full transition-transform duration-700 transform-style-preserve-3d ${flippedIndex === idx ? "rotate-y-180" : ""
+                    } group`}
                 >
                   {/* Front */}
                   <div className="absolute inset-0 rounded-full overflow-hidden shadow-lg backface-hidden transform transition-transform duration-300 group-hover:scale-110 group-hover:shadow-[0_0_20px_4px_rgba(250,204,21,0.5)]">
