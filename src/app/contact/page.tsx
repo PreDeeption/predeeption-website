@@ -84,9 +84,8 @@ export default function ContactPage() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className={`w-full bg-yellow-400 text-black font-bold py-3 rounded-lg hover:bg-yellow-500 transition ${
-            status === "loading" ? "opacity-70 cursor-not-allowed" : ""
-          }`}
+          className={`w-full bg-yellow-400 text-black font-bold py-3 rounded-lg hover:bg-yellow-500 transition ${status === "loading" ? "opacity-70 cursor-not-allowed" : ""
+            }`}
         >
           {status === "loading" ? "Sending..." : "Send"}
         </button>
@@ -96,22 +95,29 @@ export default function ContactPage() {
       {status !== "idle" && (
         <div
           className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50"
-          onClick={() => setStatus("idle")}
+          onClick={() => status !== "loading" && setStatus("idle")}
         >
           <div
             className="bg-white text-black p-6 rounded-xl shadow-xl max-w-sm text-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <p className="mb-4">{dialogMessage}</p>
-            <button
-              className="bg-yellow-400 text-black px-4 py-2 rounded font-bold hover:bg-yellow-500"
-              onClick={() => setStatus("idle")}
-            >
-              OK
-            </button>
+            {status === "loading" ? (
+              <p className="mb-4">⏳ Sending your message...</p>
+            ) : (
+              <>
+                <p className="mb-4">{dialogMessage}</p>
+                <button
+                  className="bg-yellow-400 text-black px-4 py-2 rounded font-bold hover:bg-yellow-500"
+                  onClick={() => setStatus("idle")}
+                >
+                  OK
+                </button>
+              </>
+            )}
           </div>
         </div>
       )}
+
     </main>
   );
 }
